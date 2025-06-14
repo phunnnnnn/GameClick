@@ -1,0 +1,60 @@
+[gd_scene load_steps=2 format=3 uid="uid://8oa6lset6jw3"]
+
+[ext_resource type="Script" uid="uid://d1th6oo2sey2p" path="res://Script/mainScript.gd" id="1_f6udf"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f6udf")
+
+[node name="clickButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 498.0
+offset_top = 283.0
+offset_right = -507.0
+offset_bottom = -245.0
+text = "Button"
+
+[node name="clicktimeLable" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 370.0
+offset_right = -382.0
+offset_bottom = 200.0
+grow_horizontal = 2
+text = "Clicked 0 time"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="bomb" type="Timer" parent="."]
+
+[node name="prebomb" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="bombScaling" type="Timer" parent="."]
+wait_time = 5.0
+
+[node name="clock" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 731.0
+offset_top = 249.0
+offset_right = -21.0
+offset_bottom = 449.0
+grow_horizontal = 2
+text = "TIME >> 0.0"
+horizontal_alignment = 1
+vertical_alignment = 1
