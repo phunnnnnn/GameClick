@@ -1,0 +1,157 @@
+[gd_scene load_steps=2 format=3 uid="uid://8oa6lset6jw3"]
+
+[ext_resource type="Script" uid="uid://d1th6oo2sey2p" path="res://Script/mainScript.gd" id="1_v45jg"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v45jg")
+
+[node name="clickButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 498.0
+offset_top = 283.0
+offset_right = -507.0
+offset_bottom = -245.0
+text = "Button"
+
+[node name="clicktimeLable" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 41.0
+offset_top = 166.0
+offset_right = -897.0
+offset_bottom = 247.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 1, 0.933333, 1)
+theme_override_font_sizes/font_size = 30
+text = "Clicked 0 time"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="clock" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 547.0
+offset_top = 528.0
+offset_right = -332.0
+offset_bottom = 643.0
+grow_horizontal = 2
+text = "TIME >> 0.0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="moneyLable" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 7.0
+offset_top = 8.0
+offset_right = -923.0
+offset_bottom = 88.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0.921569, 0.145098, 1)
+theme_override_font_sizes/font_size = 30
+text = "Money = 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="bombPowerLable" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 15.0
+offset_top = 288.0
+offset_right = -856.0
+offset_bottom = 401.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.952941, 0.541176, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "BOMB POWER >> 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="mousePowerLable" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 18.0
+offset_top = 403.0
+offset_right = -853.0
+offset_bottom = 516.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.768743, 0.00259829, 0.982228, 1)
+theme_override_font_sizes/font_size = 30
+text = "Mouse POWER >> 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="timeLeftLable" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 351.0
+offset_right = -434.0
+offset_bottom = 141.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Time left >> 0.0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="clickPerSecLable" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 245.0
+offset_top = 522.0
+offset_right = -578.0
+offset_bottom = 636.0
+grow_horizontal = 2
+text = "Click per min >> 0.0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="shop" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -302.0
+offset_right = -2.0
+offset_bottom = 2.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="rerollButton" type="Button" parent="shop"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 551.0
+offset_right = 292.0
+offset_bottom = 636.0
+text = "ReRoll"
+
+[node name="timerContainter" type="Node" parent="."]
+
+[node name="Timer" type="Timer" parent="timerContainter"]
+wait_time = 0.1
+
+[node name="bomb" type="Timer" parent="timerContainter"]
+
+[node name="prebomb" type="Timer" parent="timerContainter"]
+wait_time = 5.0
+one_shot = true
+
+[node name="bombScaling" type="Timer" parent="timerContainter"]
+wait_time = 5.0
