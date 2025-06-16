@@ -13,10 +13,14 @@ func _process(delta: float) -> void:
 func _on_pressed() :
 	print("Upgrade yay")
 	main.queue_free()
+	GameState.mousePower += 1
+	GameState.upgrade_pressed_signal()
 	pass
 
-func _enter_button() :
-	print("ssss")
 
+func _enter_button() :
+	#print("ssss")
+	pass
 func _exit_button() :
-	print("dddd")
+	#print("dddd")
+	pass

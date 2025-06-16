@@ -26,7 +26,7 @@ var clickedTime = 0
 var bombPower = 1
 var clickPerMin = 0.0
 
-var mousePower = 1
+var mousePower = GameState.mousePower
 var mouse_inside = 0
 
 func _ready() -> void:
@@ -43,6 +43,8 @@ func _ready() -> void:
 	#upgradeButton.mouse_exited.connect(_shop_exit)
 	
 	rerollbutton.pressed.connect(_reroll)
+	
+	GameState.upgrade_pressed.connect(_upgrade)
 	
 	myTimer.start()
 	prebomb.start()
@@ -123,3 +125,8 @@ func _reroll() :
 	var upgradeIcon = load("res://Scene/upgradeScene.tscn")
 	var instance = upgradeIcon.instantiate()
 	shop.add_child(instance)
+
+func _upgrade() :
+	mousePowerLable.text = "Mouse POWER >> %d" %mousePower
+	print("Upgrade")
+	pass
